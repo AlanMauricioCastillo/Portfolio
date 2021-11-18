@@ -17,6 +17,10 @@ const Index = () => (
               <h3>{I_am.title}</h3>
               <p>{I_am.description}</p>
               <a href="hireMe" className="intermitente">
+                <span className="span1"></span>
+                <span className="span2"></span>
+                <span className="span3"></span>
+                <span className="span4"></span>
                 Hire Me
               </a>
             </div>
@@ -26,14 +30,14 @@ const Index = () => (
     </header>
 
     <div className="row py-2">
-      <div className="col-md-5">
+      <div className="mx-auto col-md-5">
         <div className="p-2 bg-dark">
           <h3>
             Skills <img width="45px" src={skillLogo}></img>
           </h3>
           <ul className=" row row-cols-2">
-            {skillsStikers.map(({ tec, url }) => (
-              <li className="col" key={tec}>
+            {skillsStikers.map(({ tec, url }, index) => (
+              <li className="col" key={index}>
                 <i className="fas fa-check"></i>
                 {tec}
                 <img
@@ -44,6 +48,22 @@ const Index = () => (
               </li>
             ))}
           </ul>
+        </div>
+        <div className="bg-dark pb-5" >
+          <a href="Resume" className="intermitenteReflex">
+            <span className="span1"></span>
+            <span className="span2"></span>
+            <span className="span3"></span>
+            <span className="span4"></span>
+            ⮯Resume
+          </a>
+          <a href="KnowMore" className="intermitenteReflex">
+            <span className="span1"></span>
+            <span className="span2"></span>
+            <span className="span3"></span>
+            <span className="span4"></span>
+            Know More
+          </a>
         </div>
       </div>
 
