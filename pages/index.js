@@ -42,6 +42,7 @@ const Index = () => (
                   {skill}
                 </li>
               ))}
+              <img width ='32px' src ='https://raw.githubusercontent.com/rahulbanerjee26/githubAboutMeGenerator/main/icons/reactjs.svg'></img>
             </ul>
           </div>
         </div>
