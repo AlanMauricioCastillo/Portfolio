@@ -1,9 +1,7 @@
 import Layout from "../components/layout";
-import { skills } from "../public/profile";
+import { skillLogo, skillsStikers } from "../public/profile";
 import { experience } from "../public/profile";
 import { I_am } from "../public/profile";
-
-
 
 const Index = () => (
   <Layout>
@@ -18,10 +16,7 @@ const Index = () => (
               <h1 className="text-light">{I_am.name}</h1>
               <h3>{I_am.title}</h3>
               <p>{I_am.description}</p>
-              <a
-                href="hireMe"
-                className="intermitente"
-              >
+              <a href="hireMe" className="intermitente">
                 Hire Me
               </a>
             </div>
@@ -31,24 +26,28 @@ const Index = () => (
     </header>
 
     <div className="row py-2">
-      <div className="col-md-4">
-        <div className="card bg-dark">
-          <div className="card-body">
-            <h3>Skills</h3>
-            <ul>
-              {skills.map((skill) => (
-                <li key={skill}>
-                  <i className="fas fa-check"></i>
-                  {skill}
-                </li>
-              ))}
-              <img width ='32px' src ='https://raw.githubusercontent.com/rahulbanerjee26/githubAboutMeGenerator/main/icons/reactjs.svg'></img>
-            </ul>
-          </div>
+      <div className="col-md-5">
+        <div className="p-2 bg-dark">
+          <h3>
+            Skills <img width="45px" src={skillLogo}></img>
+          </h3>
+          <ul className=" row row-cols-2">
+            {skillsStikers.map(({ tec, url }) => (
+              <li className="col" key={tec}>
+                <i className="fas fa-check"></i>
+                {tec}
+                <img
+                  style={{ paddingLeft: "12px" }}
+                  width="50px"
+                  src={url}
+                ></img>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
 
-      <div className="col-md-8">
+      <div className="col-md-7">
         <div className="card bg-dark">
           <div className="card-body">
             <h1>Experience</h1>
@@ -79,4 +78,3 @@ const Index = () => (
 );
 
 export default Index;
-

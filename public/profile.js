@@ -1,20 +1,35 @@
-export const skills = [
-  "HTML5",
-  "CSS3",
-  "JavaScript",
-  "React-Redux",
-  "Node.js",
-  "Express.js",
-  "MongoDB",
-  "SQL",
-  "Git",
-  "TDD",
-  "NextJs",
-  "TypeScript",
-  "Cookies",
-  "Teaching Assistant",
-  "Sequelize"
+export const skillsStikers = [
+  {tec:"HTML5", url:"https://raw.githubusercontent.com/AlanMauricioCastillo/Portfolio/master/public/skilsStikers/html.svg"},
+  {tec:"Babel", url:"https://raw.githubusercontent.com/AlanMauricioCastillo/Portfolio/master/public/skilsStikers/babel.svg"},
+  {tec:"CSS3", url:"https://raw.githubusercontent.com/AlanMauricioCastillo/Portfolio/master/public/skilsStikers/css.svg"},
+  {tec:"Bootstrap", url:"https://raw.githubusercontent.com/AlanMauricioCastillo/Portfolio/master/public/skilsStikers/bootstrap.svg"},
+  {tec:"Bash", url:"https://raw.githubusercontent.com/AlanMauricioCastillo/Portfolio/master/public/skilsStikers/bash.svg"},
+  {tec:"JavaScript", url:"https://raw.githubusercontent.com/AlanMauricioCastillo/Portfolio/master/public/skilsStikers/javascript.svg"},
+  {tec:"React", url:"https://raw.githubusercontent.com/AlanMauricioCastillo/Portfolio/master/public/skilsStikers/reactjs.svg"},
+  {tec:"Redux", url:"https://raw.githubusercontent.com/AlanMauricioCastillo/Portfolio/master/public/skilsStikers/redux.svg"},
+  {tec:"Node.js", url:"https://raw.githubusercontent.com/AlanMauricioCastillo/Portfolio/master/public/skilsStikers/nodejs.svg"},
+  {tec:"Express.js", url:"https://raw.githubusercontent.com/AlanMauricioCastillo/Portfolio/master/public/skilsStikers/express.svg"},
+  {tec:"SQL", url:"https://raw.githubusercontent.com/AlanMauricioCastillo/Portfolio/master/public/skilsStikers/sql.png"},
+  {tec:"Webpack", url:"https://raw.githubusercontent.com/AlanMauricioCastillo/Portfolio/master/public/skilsStikers/webpack.svg"},
+  {tec:"SQLite", url:"https://raw.githubusercontent.com/AlanMauricioCastillo/Portfolio/master/public/skilsStikers/sqlite.svg"},
+  {tec:"Postman", url:"https://raw.githubusercontent.com/AlanMauricioCastillo/Portfolio/master/public/skilsStikers/postman.svg"},
+  {tec:"PostgresSQL", url:"https://raw.githubusercontent.com/AlanMauricioCastillo/Portfolio/master/public/skilsStikers/postgresql.svg"},
+  {tec:"React-Native", url:"https://raw.githubusercontent.com/AlanMauricioCastillo/Portfolio/master/public/skilsStikers/reactnative.svg"},
+  {tec:"MySQL", url:"https://raw.githubusercontent.com/AlanMauricioCastillo/Portfolio/master/public/skilsStikers/mysql.svg"},
+  {tec:"Mocha", url:"https://raw.githubusercontent.com/AlanMauricioCastillo/Portfolio/master/public/skilsStikers/mocha.svg"},
+  {tec:"Jest", url:"https://raw.githubusercontent.com/AlanMauricioCastillo/Portfolio/master/public/skilsStikers/jest.svg"},
+  {tec:"Heroku", url:"https://raw.githubusercontent.com/AlanMauricioCastillo/Portfolio/master/public/skilsStikers/heroku.svg"},
+  {tec:"GitHub", url:"https://raw.githubusercontent.com/AlanMauricioCastillo/Portfolio/master/public/skilsStikers/github.svg"},
+  {tec:"Git", url:"https://raw.githubusercontent.com/AlanMauricioCastillo/Portfolio/master/public/skilsStikers/git.svg"},
+  {tec:"TDD", url:"https://raw.githubusercontent.com/AlanMauricioCastillo/Portfolio/master/public/skilsStikers/Tdd.png"},
+  {tec:"NextJs", url:"https://raw.githubusercontent.com/AlanMauricioCastillo/Portfolio/master/public/skilsStikers/nextjs.svg"},
+  {tec:"TypeScript", url:"https://raw.githubusercontent.com/AlanMauricioCastillo/Portfolio/master/public/skilsStikers/typescript.svg"},
+  {tec:"Cookies", url:"https://raw.githubusercontent.com/AlanMauricioCastillo/Portfolio/master/public/skilsStikers/cookis.png"},
+  {tec:"Teaching Assistant", url:"https://raw.githubusercontent.com/AlanMauricioCastillo/Portfolio/master/public/skilsStikers/Ta.png"},
+  {tec:"Sequelize", url:"https://raw.githubusercontent.com/AlanMauricioCastillo/Portfolio/master/public/skilsStikers/sequelize.png"}
 ];
+
+export const  skillLogo = 'https://raw.githubusercontent.com/AlanMauricioCastillo/Portfolio/master/public/skilsStikers/giphyskils.webp'
 
 export const experience = [{
   title: "Full Stack Developer",
@@ -54,28 +69,3 @@ export const I_am = {
   with very good soft skills, always with the possibility of
   improving.`,
 };
-`
-<h2> Skills <img src = "https://media2.giphy.com/media/QssGEmpkyEOhBCb7e1/giphy.gif?cid=ecf05e47a0n3gi1bfqntqmob8g9aid1oyj2wr3ds3mg700bl&rid=giphy.gif" width = 32px> </h2>
-<a href= https://github.com/AlanMauricioCastillo?tab=repositories&q=&type=&language=reactjs&sort= > <img width ='32px' src ='https://raw.githubusercontent.com/rahulbanerjee26/githubAboutMeGenerator/main/icons/reactjs.svg'> </a>
-<a href= https://github.com/AlanMauricioCastillo?tab=repositories&q=&type=&language=javascript&sort= > <img width ='32px' src ='https://raw.githubusercontent.com/rahulbanerjee26/githubAboutMeGenerator/main/icons/javascript.svg'> </a>
-<a href= https://github.com/AlanMauricioCastillo?tab=repositories&q=&type=&language=sqlite&sort= > <img width ='32px' src ='https://raw.githubusercontent.com/rahulbanerjee26/githubAboutMeGenerator/main/icons/sqlite.svg'> </a>
-<a href= https://github.com/AlanMauricioCastillo?tab=repositories&q=&type=&language=babel&sort= > <img width ='32px' src ='https://raw.githubusercontent.com/rahulbanerjee26/githubAboutMeGenerator/main/icons/babel.svg'> </a>
-<a href= https://github.com/AlanMauricioCastillo?tab=repositories&q=&type=&language=bootstrap&sort= > <img width ='32px' src ='https://raw.githubusercontent.com/rahulbanerjee26/githubAboutMeGenerator/main/icons/bootstrap.svg'> </a>
-<a href= https://github.com/AlanMauricioCastillo?tab=repositories&q=&type=&language=bash&sort= > <img width ='32px' src ='https://raw.githubusercontent.com/rahulbanerjee26/githubAboutMeGenerator/main/icons/bash.svg'> </a>
-<a href= https://github.com/AlanMauricioCastillo?tab=repositories&q=&type=&language=css&sort= > <img width ='32px' src ='https://raw.githubusercontent.com/rahulbanerjee26/githubAboutMeGenerator/main/icons/css.svg'> </a>
-<a href= https://github.com/AlanMauricioCastillo?tab=repositories&q=&type=&language=express&sort= > <img width ='32px' src ='https://raw.githubusercontent.com/rahulbanerjee26/githubAboutMeGenerator/main/icons/express.svg'> </a>
-<a href= https://github.com/AlanMauricioCastillo?tab=repositories&q=&type=&language=git&sort= > <img width ='32px' src ='https://raw.githubusercontent.com/rahulbanerjee26/githubAboutMeGenerator/main/icons/git.svg'> </a>
-<a href= https://github.com/AlanMauricioCastillo?tab=repositories&q=&type=&language=github&sort= > <img width ='32px' src ='https://raw.githubusercontent.com/rahulbanerjee26/githubAboutMeGenerator/main/icons/github.svg'> </a>
-<a href= https://github.com/AlanMauricioCastillo?tab=repositories&q=&type=&language=heroku&sort= > <img width ='32px' src ='https://raw.githubusercontent.com/rahulbanerjee26/githubAboutMeGenerator/main/icons/heroku.svg'> </a>
-<a href= https://github.com/AlanMauricioCastillo?tab=repositories&q=&type=&language=html&sort= > <img width ='32px' src ='https://raw.githubusercontent.com/rahulbanerjee26/githubAboutMeGenerator/main/icons/html.svg'> </a>
-<a href= https://github.com/AlanMauricioCastillo?tab=repositories&q=&type=&language=jest&sort= > <img width ='32px' src ='https://raw.githubusercontent.com/rahulbanerjee26/githubAboutMeGenerator/main/icons/jest.svg'> </a>
-<a href= https://github.com/AlanMauricioCastillo?tab=repositories&q=&type=&language=mocha&sort= > <img width ='32px' src ='https://raw.githubusercontent.com/rahulbanerjee26/githubAboutMeGenerator/main/icons/mocha.svg'> </a>
-<a href= https://github.com/AlanMauricioCastillo?tab=repositories&q=&type=&language=mysql&sort= > <img width ='32px' src ='https://raw.githubusercontent.com/rahulbanerjee26/githubAboutMeGenerator/main/icons/mysql.svg'> </a>
-<a href= https://github.com/AlanMauricioCastillo?tab=repositories&q=&type=&language=nextjs&sort= > <img width ='32px' src ='https://raw.githubusercontent.com/rahulbanerjee26/githubAboutMeGenerator/main/icons/nextjs.svg'> </a>
-<a href= https://github.com/AlanMauricioCastillo?tab=repositories&q=&type=&language=nodejs&sort= > <img width ='32px' src ='https://raw.githubusercontent.com/rahulbanerjee26/githubAboutMeGenerator/main/icons/nodejs.svg'> </a>
-<a href= https://github.com/AlanMauricioCastillo?tab=repositories&q=&type=&language=postgresql&sort= > <img width ='32px' src ='https://raw.githubusercontent.com/rahulbanerjee26/githubAboutMeGenerator/main/icons/postgresql.svg'> </a>
-<a href= https://github.com/AlanMauricioCastillo?tab=repositories&q=&type=&language=postman&sort= > <img width ='32px' src ='https://raw.githubusercontent.com/rahulbanerjee26/githubAboutMeGenerator/main/icons/postman.svg'> </a>
-<a href= https://github.com/AlanMauricioCastillo?tab=repositories&q=&type=&language=reactnative&sort= > <img width ='32px' src ='https://raw.githubusercontent.com/rahulbanerjee26/githubAboutMeGenerator/main/icons/reactnative.svg'> </a>
-<a href= https://github.com/AlanMauricioCastillo?tab=repositories&q=&type=&language=redux&sort= > <img width ='32px' src ='https://raw.githubusercontent.com/rahulbanerjee26/githubAboutMeGenerator/main/icons/redux.svg'> </a>
-<a href= https://github.com/AlanMauricioCastillo?tab=repositories&q=&type=&language=typescript&sort= > <img width ='32px' src ='https://raw.githubusercontent.com/rahulbanerjee26/githubAboutMeGenerator/main/icons/typescript.svg'> </a>
-<a href= https://github.com/AlanMauricioCastillo?tab=repositories&q=&type=&language=webpack&sort= > <img width ='32px' src ='https://raw.githubusercontent.com/rahulbanerjee26/githubAboutMeGenerator/main/icons/webpack.svg'> </a>`
