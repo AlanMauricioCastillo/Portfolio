@@ -11,7 +11,7 @@ const Index = () => (
           <div className="row">
             <div className="col-md-5">
               <img
-                src="DEVELOPER.gif"
+                src="DEV.gif"
                 alt="Alan Castillo"
                 className="img-fluid"
               />
