@@ -104,7 +104,7 @@ export const skillsStikers = [
     url: "https://raw.githubusercontent.com/AlanMauricioCastillo/Portfolio/master/public/skilsStikers/cookis.png",
   },
   {
-    tec: "Teaching Assistant",
+    tec: "Teach. Assis.",
     url: "https://raw.githubusercontent.com/AlanMauricioCastillo/Portfolio/master/public/skilsStikers/Ta.png",
   },
   {
@@ -203,3 +203,11 @@ export const projects = [
     link: "https://alanmauriciocastillo.github.io/Portfolio/",
   },
 ];
+
+export const PinedRepos = [
+  "MarvelApp---React-Native", 
+  "PI-Countries-main", 
+  "PI-Pokemon", 
+  "Workshop-TypeScript", 
+  "Portfolio"
+]

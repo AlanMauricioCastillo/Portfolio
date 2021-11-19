@@ -12,6 +12,7 @@
   overflow: hidden;
   transition: 0.8s;
 }
+
 @keyframes resplandorAnimation {
   0%,
   100% {
@@ -102,6 +103,7 @@
   transition: 0.8s;
   -webkit-box-reflect: below 2px linear-gradient(transparent, #a945c7);
 }
+
 @keyframes resplandorAnimation {
   0%,
   100% {
