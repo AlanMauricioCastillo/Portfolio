@@ -1,4 +1,4 @@
-import Layout from "../components/layout";
+import Layout from "../components/Layout";
 import { skillLogo, skillsStikers, projects } from "../public/profile";
 import { experience } from "../public/profile";
 import { I_am } from "../public/profile";
@@ -18,7 +18,7 @@ const Index = () => (
             </div>
             <div className="col-md-7">
               <h1 className="text-light">{I_am.name}</h1>
-              <h3>{I_am.title}</h3>
+              <h3>{I_am.profession}</h3>
               <p>{I_am.description}</p>
               <a href="hireMe" className="intermitente">
                 <span className="span1"></span>
@@ -80,7 +80,7 @@ const Index = () => (
                 <li key={index}>
                   <h3>
                     <i className="fas fa-briefcase"></i>
-                    {exp.title}
+                    {exp.name}
                   </h3>
                   <p>
                     <i className="fas fa-calendar-alt"></i>
@@ -106,14 +106,14 @@ const Index = () => (
             <div className="col-md-12">
               <h1 className="text-center text-light">Portfolio</h1>
             </div>
-            {projects.map(({ title, description, img, link }, index) => (
+            {projects.map(({ name, description, img, link }, index) => (
               <div className="col-md-4 p-2" key={index}>
                 <div className="card h-100 border-light">
                   <div className="overFlow">
                     <img src={img} className="card-img-top" alt="..."></img>
                   </div>
                   <div className="card-body">
-                    <h3 className="card-title">{title}</h3>
+                    <h3>{name}</h3>
                     <p className="card-text">{description}</p>
                     <a href={link} className="btn btn-primary">
                       Go to project
