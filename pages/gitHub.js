@@ -1,7 +1,8 @@
 import Layout from "../components/Layout";
+import FetchError from "./_fetchError";
 
-const GitHub = ({user}) => {
-
+const GitHub = ({user, statusCode}) => {
+  if (user.message === "Not Found" || statusCode) return <FetchError />;
   return (
   <Layout>
     <div className="row">
@@ -19,12 +20,23 @@ const GitHub = ({user}) => {
 )};
 
 export const getServerSideProps = async () => {
-  const result = await fetch('https://api.github.com/users/AlanMauricioCastillo');
-  const data = await result.json();
-  return {
-    props: {
-      user: data
-    },
+  try {
+    const response = await fetch(`https://api.github.com/users/AlanMauricioCastillo`);
+    const user = await response.json();
+    const statusCode = response.status > 200 ? response.status : false;
+    return {
+      props: {
+        user,
+        statusCode
+      }
+    };
+  } catch (error) {
+    return {
+      props: {
+        user: null,
+        error: error
+      }
+    };
   };
 };
 
