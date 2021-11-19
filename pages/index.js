@@ -1,7 +1,6 @@
 import Layout from "../components/Layout";
 import { skillLogo, skillsStikers, projects } from "../public/profile";
-import { experience } from "../public/profile";
-import { I_am } from "../public/profile";
+import { experience, I_am, links } from "../public/profile";
 
 const Index = () => (
   <Layout title={"Welcome"}>
@@ -23,19 +22,19 @@ const Index = () => (
                 <span className="span4"></span>
                 Hire Me
               </a>
-              <a href="hireMe" className="intermitente">
+              <a href={links.linkedIn.urlink} className="intermitente">
                 <span className="span1"></span>
                 <span className="span2"></span>
                 <span className="span3"></span>
                 <span className="span4"></span>
-                <img width = '32px' align= 'center' src="https://raw.githubusercontent.com/rahulbanerjee26/githubAboutMeGenerator/main/icons/linked-in-alt.svg"/>
+                <img width = '32px' align= 'center' src={links.linkedIn.icon}/>
               </a>
-              <a href="hireMe" className="intermitente">
+              <a href={links.twetter.urlink} className="intermitente">
                 <span className="span1"></span>
                 <span className="span2"></span>
                 <span className="span3"></span>
                 <span className="span4"></span>
-                Hire Me
+                <img width = '32px' align= 'center' src={links.twetter.icon}/>
               </a>
             </div>
           </div>

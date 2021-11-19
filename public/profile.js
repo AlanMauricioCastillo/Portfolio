@@ -205,9 +205,20 @@ export const projects = [
 ];
 
 export const PinedRepos = [
-  "MarvelApp---React-Native", 
-  "PI-Countries-main", 
-  "PI-Pokemon", 
-  "Workshop-TypeScript", 
-  "Portfolio"
-]
+  "MarvelApp---React-Native",
+  "PI-Countries-main",
+  "PI-Pokemon",
+  "Workshop-TypeScript",
+  "Portfolio",
+];
+
+export const links = {
+  twetter: {
+    icon: "https://raw.githubusercontent.com/AlanMauricioCastillo/Portfolio/master/public/stikersDeContacto/twitter.svg",
+    urlink: "https://www.twitter.com/@AlanCas94011193",
+  },
+  linkedIn: {
+    icon: "https://raw.githubusercontent.com/AlanMauricioCastillo/Portfolio/master/public/stikersDeContacto/linked-in-alt.svg",
+    urlink: "https://www.linkedin.com/in/alancastillofullstackdeveloper/",
+  },
+};
