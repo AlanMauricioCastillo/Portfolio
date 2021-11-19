@@ -2,6 +2,23 @@ import Layout from "../components/Layout";
 import FetchError from "./_fetchError";
 import { PinedRepos } from "../public/profile";
 
+const card = (visibility, name, description, language, html_url, index) => {
+  return (
+    <div className="col-md-4 p-2" key={index}>
+      <div className="card h-100 border-primary">
+        <div className="card-body text-light">
+          <h3>{name}</h3>
+          <h4>{language}</h4>
+          <p className="card-text">{description}</p>
+          <a href={html_url} className="btn btn-light text-primary">
+            Go to project
+          </a>
+        </div>
+      </div>
+    </div>
+  );
+};
+
 const GitHub = ({ user, repo, statusCode }) => {
   if (user.message === "Not Found" || statusCode)
     return <FetchError statusCode={statusCode} />;
@@ -30,20 +47,8 @@ const GitHub = ({ user, repo, statusCode }) => {
                   index
                 ) =>
                   visibility === "public" &&
-                  PinedRepos.includes(name) && (
-                    <div className="col-md-4 p-2" key={index}>
-                      <div className="card h-100 border-primary">
-                        <div className="card-body text-light">
-                          <h3>{name}</h3>
-                          <h4>{language}</h4>
-                          <p className="card-text">{description}</p>
-                          <a href={html_url} className="btn btn-light text-primary">
-                            Go to project
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  )
+                  PinedRepos.includes(name) &&
+                  card(visibility, name, description, language, html_url, index)
               )}
             </div>
           </div>
@@ -58,20 +63,8 @@ const GitHub = ({ user, repo, statusCode }) => {
             {repo.map(
               ({ visibility, name, description, language, html_url }, index) =>
                 visibility === "public" &&
-                !PinedRepos.includes(name) && (
-                  <div className="col-md-4 p-2" key={index}>
-                    <div className="card h-100 border-primary">
-                      <div className="card-body text-light">
-                        <h3>{name}</h3>
-                        <h4>{language}</h4>
-                        <p className="card-text">{description}</p>
-                        <a href={html_url} className="btn btn-light text-primary">
-                          Go to project
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                )
+                !PinedRepos.includes(name) &&
+                card(visibility, name, description, language, html_url, index)
             )}
           </div>
         </div>

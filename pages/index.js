@@ -10,16 +10,26 @@ const Index = () => (
         <div className="card card-body bg-dark border-light">
           <div className="row">
             <div className="col-md-5">
-              <img
-                src="DEV.gif"
-                alt="Alan Castillo"
-                className="img-fluid"
-              />
+              <img src="DEV.gif" alt="Alan Castillo" className="img-fluid" />
             </div>
             <div className="col-md-7">
               <h1 className="text-light">{I_am.name}</h1>
               <h3>{I_am.profession}</h3>
               <p>{I_am.description}</p>
+              <a href="hireMe" className="intermitente">
+                <span className="span1"></span>
+                <span className="span2"></span>
+                <span className="span3"></span>
+                <span className="span4"></span>
+                Hire Me
+              </a>
+              <a href="hireMe" className="intermitente">
+                <span className="span1"></span>
+                <span className="span2"></span>
+                <span className="span3"></span>
+                <span className="span4"></span>
+                <img width = '32px' align= 'center' src="https://raw.githubusercontent.com/rahulbanerjee26/githubAboutMeGenerator/main/icons/linked-in-alt.svg"/>
+              </a>
               <a href="hireMe" className="intermitente">
                 <span className="span1"></span>
                 <span className="span2"></span>
