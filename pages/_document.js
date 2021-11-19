@@ -11,7 +11,6 @@ class MyDocument extends Document {
       <Html lang="en">
         <Head>
           <meta name="description" content="Alan Castillo Portfolio" />
-          <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
         </Head>
           <body>
             <Main />
