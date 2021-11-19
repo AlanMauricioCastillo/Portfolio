@@ -9,20 +9,20 @@ const GitHub = ({ user, repo, statusCode }) => {
     <Layout title="My GitHub">
       <section className="row py-2">
         <div className="col-md-4">
-          <div className="card card-body border-light text-center">
-            <h1>{user.name}</h1>
+          <div className="card card-body border-primary text-center">
+            <h1 className="text-light">{user.name}</h1>
             <img className="round-img" src={user.avatar_url} alt="" />
-            <p className="text-light">{user.bio}</p>
-            <a href={user.html_url} className="btn btn-dark">
+            <p>{user.bio}</p>
+            <a href={user.html_url} className="btn btn-light text-primary">
               Visit GitHub Profile
             </a>
           </div>
         </div>
         <div className="col-md-8">
-          <div className="card card-body bg-dark border-light">
+          <div className="card card-body bg-dark border-primary">
             <div className="row">
               <div className="col-md-12">
-                <h1 className="text-center text-light">Pinned</h1>
+                <h1 className="text-center">Pinned</h1>
               </div>
               {repo.map(
                 (
@@ -32,12 +32,12 @@ const GitHub = ({ user, repo, statusCode }) => {
                   visibility === "public" &&
                   PinedRepos.includes(name) && (
                     <div className="col-md-4 p-2" key={index}>
-                      <div className="card h-100 border-light">
-                        <div className="card-body">
+                      <div className="card h-100 border-primary">
+                        <div className="card-body text-light">
                           <h3>{name}</h3>
                           <h4>{language}</h4>
                           <p className="card-text">{description}</p>
-                          <a href={html_url} className="btn btn-primary">
+                          <a href={html_url} className="btn btn-light text-primary">
                             Go to project
                           </a>
                         </div>
@@ -50,22 +50,22 @@ const GitHub = ({ user, repo, statusCode }) => {
         </div>
       </section>
       <div className="col-md-12">
-        <div className="card card-body bg-dark border-light">
+        <div className="card card-body bg-dark border-primary">
           <div className="row">
             <div className="col-md-12">
-              <h1 className="text-center text-light">Repositories</h1>
+              <h1 className="text-center">Repositories</h1>
             </div>
             {repo.map(
               ({ visibility, name, description, language, html_url }, index) =>
                 visibility === "public" &&
                 !PinedRepos.includes(name) && (
                   <div className="col-md-4 p-2" key={index}>
-                    <div className="card h-100 border-light">
-                      <div className="card-body">
+                    <div className="card h-100 border-primary">
+                      <div className="card-body text-light">
                         <h3>{name}</h3>
                         <h4>{language}</h4>
                         <p className="card-text">{description}</p>
-                        <a href={html_url} className="btn btn-primary">
+                        <a href={html_url} className="btn btn-light text-primary">
                           Go to project
                         </a>
                       </div>

@@ -4,10 +4,10 @@ import { experience } from "../public/profile";
 import { I_am } from "../public/profile";
 
 const Index = () => (
-  <Layout>
+  <Layout title={"Welcome"}>
     <header className="row">
       <div className="col-md-12">
-        <div className="card card-body bg-dark border-light text-light">
+        <div className="card card-body bg-dark border-light">
           <div className="row">
             <div className="col-md-5">
               <img
@@ -54,7 +54,7 @@ const Index = () => (
           </ul>
         </div>
         <div className="d-flex flex-row justify-content-center align-items-center card bg-black pb-4">
-          <a href="Resume" className="intermitenteReflex">
+          <a href="/DEVELOPER.gif" className="intermitenteReflex" download>
             <span className="span1"></span>
             <span className="span2"></span>
             <span className="span3"></span>
@@ -74,7 +74,7 @@ const Index = () => (
       <div className="col-md-7">
         <div className="card bg-dark border-light">
           <div className="card-body">
-            <h1>Experience</h1>
+            <h1 className="text-light">Experience</h1>
             <ul>
               {experience.map((exp, index) => (
                 <li key={index}>
