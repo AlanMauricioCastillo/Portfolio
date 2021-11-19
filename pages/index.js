@@ -1,5 +1,5 @@
 import Layout from "../components/layout";
-import { skillLogo, skillsStikers } from "../public/profile";
+import { skillLogo, skillsStikers, projects } from "../public/profile";
 import { experience } from "../public/profile";
 import { I_am } from "../public/profile";
 
@@ -7,12 +7,16 @@ const Index = () => (
   <Layout>
     <header className="row">
       <div className="col-md-12">
-        <div className="card card-body bg-dark text-light">
+        <div className="card card-body bg-dark border-light text-light">
           <div className="row">
-            <div className="col-md-4">
-              <img src="img1.jpg" alt="Alan Castillo" className="img-fluid" />
+            <div className="col-md-5">
+              <img
+                src="DEVELOPER.gif"
+                alt="Alan Castillo"
+                className="img-fluid"
+              />
             </div>
-            <div className="col-md-8">
+            <div className="col-md-7">
               <h1 className="text-light">{I_am.name}</h1>
               <h3>{I_am.title}</h3>
               <p>{I_am.description}</p>
@@ -29,9 +33,9 @@ const Index = () => (
       </div>
     </header>
 
-    <div className="row py-2">
-      <div className="mx-auto col-md-5">
-        <div className="p-2 bg-dark">
+    <section className="row py-2">
+      <div className="col-md-5">
+        <div className="p-2 bg-dark card border-light">
           <h3>
             Skills <img width="45px" src={skillLogo}></img>
           </h3>
@@ -41,7 +45,7 @@ const Index = () => (
                 <i className="fas fa-check"></i>
                 {tec}
                 <img
-                  style={{ paddingLeft: "12px" }}
+                  style={{ paddingLeft: "13px", paddingTop: "3px" }}
                   width="50px"
                   src={url}
                 ></img>
@@ -49,7 +53,7 @@ const Index = () => (
             ))}
           </ul>
         </div>
-        <div className="bg-dark pb-5" >
+        <div className="d-flex flex-row justify-content-center align-items-center card bg-black pb-4">
           <a href="Resume" className="intermitenteReflex">
             <span className="span1"></span>
             <span className="span2"></span>
@@ -62,13 +66,13 @@ const Index = () => (
             <span className="span2"></span>
             <span className="span3"></span>
             <span className="span4"></span>
-            Know More
+            🎬 Watch me
           </a>
         </div>
       </div>
 
       <div className="col-md-7">
-        <div className="card bg-dark">
+        <div className="card bg-dark border-light">
           <div className="card-body">
             <h1>Experience</h1>
             <ul>
@@ -93,7 +97,35 @@ const Index = () => (
           </div>
         </div>
       </div>
-    </div>
+    </section>
+
+    <section className="row pt-2">
+      <div className="col-md-12">
+        <div className="card card-body bg-dark border-light">
+          <div className="row">
+            <div className="col-md-12">
+              <h1 className="text-center text-light">Portfolio</h1>
+            </div>
+            {projects.map(({ title, description, img, link }, index) => (
+              <div className="col-md-4 p-2" key={index}>
+                <div className="card h-100 border-light">
+                  <div className="overFlow">
+                    <img src={img} className="card-img-top" alt="..."></img>
+                  </div>
+                  <div className="card-body">
+                    <h3 className="card-title">{title}</h3>
+                    <p className="card-text">{description}</p>
+                    <a href={link} className="btn btn-primary">
+                      Go to project
+                    </a>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
   </Layout>
 );
 

@@ -4,7 +4,7 @@
   animation: infinite resplandorAnimation 2s;
   position: relative;
   display: inline-block;
-  padding: 10px 30px;
+  padding: 1px 30px;
   color: white;
   margin: 0 15px;
   letter-spacing: 4px;
@@ -88,9 +88,6 @@
   transition-delay: 0.75s;
 }
 
-
-
-
 .intermitenteReflex {
   text-decoration: none;
   text-shadow: 0px 0px 20px;
@@ -98,7 +95,7 @@
   position: relative;
   display: inline-block;
   color: white;
-  margin: 0 15px;
+  margin: 8px 15px;
   letter-spacing: 1px;
   font-size: 20px;
   overflow: hidden;
@@ -179,4 +176,18 @@
   bottom: 100%;
   transition: 1s;
   transition-delay: 0.75s;
+}
+
+.overFlow {
+  overflow: hidden;
+  height: 50%;
+}
+
+.overFlow .card-img-top {
+  transform: scale(1);
+  transition: 0.5s ease-in-out;
+}
+
+.overFlow .card-img-top:hover {
+  transform: scale(1.5);
 }
