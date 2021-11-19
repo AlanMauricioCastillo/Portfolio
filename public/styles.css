@@ -103,7 +103,7 @@
   font-size: 20px;
   overflow: hidden;
   transition: 0.8s;
-  -webkit-box-reflect: below 1px linear-gradient(transparent, #a945c7);
+  -webkit-box-reflect: below 2px linear-gradient(transparent, #a945c7);
 }
 @keyframes resplandorAnimation {
   0%,
