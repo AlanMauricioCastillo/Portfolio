@@ -6,22 +6,23 @@ import Botn from "../components/Botn";
 import Modal from "../components/Modal";
 import { useRef, useState } from "react";
 import emailjs from 'emailjs-com';
-import link from "next/link";
+
 
 const Index = () => {
   const [showModal, setShowModal] = useState(false);
 
   const form = useRef();
-
+  
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, 'YOUR_USER_ID')
+    emailjs.sendForm(process.env.NEXT_PUBLIC_ENV_LOCAL_SERVICE_ID, process.env.NEXT_PUBLIC_ENV_LOCAL_TEMPLATE_ID, form.current, process.env.NEXT_PUBLIC_ENV_LOCAL_USER_ID)
       .then((result) => {
-          console.log(result.text);
+          alert(`Mail status ${result.text}`);
       }, (error) => {
-          console.log(error.text);
+        alert(`Mail status ${error.text}`);
       });
+      e.target.reset();
   };
 
   return (
@@ -103,7 +104,7 @@ const Index = () => {
               ))}
             </ul>
           </div>
-          <div className="d-flex flex-row justify-content-center align-items-center card bg-black pb-4">
+          <div className="d-flex flex-row justify-content-around align-items-center card bg-black pb-4">
             <a href="/DEVELOPER.gif" className="intermitenteReflex" download>
               <span className="span1"></span>
               <span className="span2"></span>
