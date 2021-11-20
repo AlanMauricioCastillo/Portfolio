@@ -11,6 +11,7 @@
   font-size: 24px;
   overflow: hidden;
   transition: 0.8s;
+  cursor: pointer;
 }
 
 @keyframes resplandorAnimation {

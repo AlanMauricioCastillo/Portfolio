@@ -221,4 +221,7 @@ export const links = {
     icon: "https://raw.githubusercontent.com/AlanMauricioCastillo/Portfolio/master/public/stikersDeContacto/linked-in-alt.svg",
     urlink: "https://www.linkedin.com/in/alancastillofullstackdeveloper/",
   },
+  handshake: {
+    icon: "https://raw.githubusercontent.com/AlanMauricioCastillo/Portfolio/master/public/stikersDeContacto/handshake.gif",
+  },
 };
