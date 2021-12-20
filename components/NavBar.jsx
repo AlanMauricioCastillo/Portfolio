@@ -5,7 +5,7 @@ const NavBar = (props) => (
     <div className="container">
       <Link href="/">
       <a className="navbar-brand">
-        Simple Portfolio
+        My Portfolio
       </a>
       </Link>
       <button
