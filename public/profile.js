@@ -170,7 +170,7 @@ export const projects = [
     name: "Countries PI",
     description: `SPA Individual Project:  Countries
     Developed it with: JavaScript, NodeJS, React- Redux, Express, SQL, TDD, CSS, HTML,`,
-    img: "./countries.png",
+    img: "./CountriesImg.png",
     link: "https://country-proyect.vercel.app/",
   },
   {
