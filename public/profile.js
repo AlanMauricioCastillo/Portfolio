@@ -161,18 +161,17 @@ export const I_am = {
 
 export const projects = [
   {
-    name: "Project Name",
-    description: `This is my portfolio, it is a website that i have developed using React.js,
-  it is a personal website that i have developed using React.js`,
-    img: "https://camo.githubusercontent.com/3edee9b46b6580d91bcb406d490dbd2558be1f80d60f7b42893696321254e50a/68747470733a2f2f692e696d6775722e636f6d2f4e764e7a3255762e706e67",
-    link: "https://alanmauriciocastillo.github.io/Portfolio/",
+    name: "JamStack Ecommerce",
+    description: `Project created in the Soy Henry bootcamp, carried out as the group project with 7 more members, we use current technologies and only css.`,
+    img: "./PgImg.png",
+    link: "https://ecommerce-pg.vercel.app",
   },
   {
-    name: "Project Name",
-    description: `This is my portfolio, it is a website that i have developed using React.js,
-  it is a personal website that i have developed using React.js`,
-    img: "https://camo.githubusercontent.com/3edee9b46b6580d91bcb406d490dbd2558be1f80d60f7b42893696321254e50a/68747470733a2f2f692e696d6775722e636f6d2f4e764e7a3255762e706e67",
-    link: "https://alanmauriciocastillo.github.io/Portfolio/",
+    name: "Countries PI",
+    description: `SPA Individual Project:  Countries
+    Developed it with: JavaScript, NodeJS, React- Redux, Express, SQL, TDD, CSS, HTML,`,
+    img: "./countries.png",
+    link: "https://country-proyect.vercel.app/",
   },
   {
     name: "Project Name",
