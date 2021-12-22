@@ -10,6 +10,7 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
+        <link rel="icon" href="/portfolio_ico.ico" />
           <meta name="description" content="Alan Castillo Portfolio" />
         </Head>
           <body>
