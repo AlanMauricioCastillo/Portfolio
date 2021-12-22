@@ -173,7 +173,7 @@ export const projects = [
     img: "./CountriesImg.png",
     link: "https://country-proyect.vercel.app/",
   },
-  {
+ /*  {
     name: "Project Name",
     description: `This is my portfolio, it is a website that i have developed using React.js,
   it is a personal website that i have developed using React.js`,
@@ -200,7 +200,7 @@ export const projects = [
   it is a personal website that i have developed using React.js`,
     img: "https://camo.githubusercontent.com/3edee9b46b6580d91bcb406d490dbd2558be1f80d60f7b42893696321254e50a/68747470733a2f2f692e696d6775722e636f6d2f4e764e7a3255762e706e67",
     link: "https://alanmauriciocastillo.github.io/Portfolio/",
-  },
+  }, */
 ];
 
 export const PinedRepos = [

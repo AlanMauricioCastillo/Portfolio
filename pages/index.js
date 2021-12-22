@@ -112,7 +112,7 @@ const Index = () => {
               <span className="span4"></span>
               ⮯Resume
             </a>
-            <a href="KnowMore" className="intermitenteReflex">
+            <a href="videoResume" className="intermitenteReflex">
               <span className="span1"></span>
               <span className="span2"></span>
               <span className="span3"></span>
