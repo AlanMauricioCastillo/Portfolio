@@ -121,19 +121,19 @@ export const experience = [
     name: "Full Stack Developer",
     since: "June 2021",
     to: "Present",
-    description: `I carry out software development projects related to the Internet, as part of a team, 
-  specialized in the programming of Internet applications, using the most widely accepted technologies in the market, 
-  but also developed skills in graphic design and usability. Knowledge related to Windows and Linux operating systems, 
-  Java Script, SQL Server, MySQL, HTML5, CSS, responsive design, CSS animation, Flex layout, Networks, Ecommerce, 
+    description: `I carried out software development projects related to the Internet, as part of a team, 
+  specialized in programming of web applications, using the most widely accepted technologies in the market, 
+  but I also developed skills in graphic design and usability. I have knowledge related to Windows and Linux operating systems, 
+  JavaScript, SQL Server, MySQL, HTML5, CSS, responsive design, CSS animation, Flex layout, Networks, Ecommerce, 
   Information Security, testing.`,
     link: "https://www.soyhenry.com/",
     webSiteName: "www.soyhenry.com",
   },
   {
-    name: "Profetional Driver",
+    name: "Professional Driver",
     since: " April 2019",
     to: "February 2021",
-    description: `I drove large passengers vehicles in urban environments`,
+    description: `I drove large passengers vehicles in urban environments.`,
     link: "https://empresa-maipu.com.ar/",
     webSiteName: "www.empresa-maipu.com.ar",
   },
@@ -143,7 +143,7 @@ export const experience = [
     to: "January 2019",
     description: `I managed the production of a concrete batching plant, 
   coordinating suppliers, carrying out logistics and dealing with clients, 
-  leading a fleet of 4 trucks.`,
+  leading a fleet of 5 trucks.`,
     link: "http://inducret.com.ar/",
     webSiteName: "inducret.com.ar",
   },
@@ -152,24 +152,24 @@ export const experience = [
 export const I_am = {
   name: "Mauricio A. Castillo",
   profession: "Full Stack Developer",
-  description: `Greetings i'm a passionate Software Developer, consider that i
+  description: `Greetings I'm a passionate Software Developer, consider that I
   have good Analytical Skills and I would love to study Software
   Engineering and Computer Science. I consider myself a person
-  with very good soft skills, always with the possibility of
+  with good soft skills, always with the possibility of
   improving.`,
 };
 
 export const projects = [
   {
     name: "JamStack Ecommerce",
-    description: `Project created in the Soy Henry bootcamp, carried out as the group project with 7 more members, we use current technologies and only css.`,
+    description: `Project created in the Henry bootcamp, carried out a group project with 7 more members, we use current technologies and only CSS.`,
     img: "./PgImg.png",
     link: "https://ecommerce-pg.vercel.app",
   },
   {
     name: "Countries PI",
     description: `SPA Individual Project:  Countries
-    Developed it with: JavaScript, NodeJS, React- Redux, Express, SQL, TDD, CSS, HTML,`,
+    Developed with: JavaScript, Node.Js, React-Redux, Express, SQL, TDD, CSS, HTML.`,
     img: "./CountriesImg.png",
     link: "https://country-proyect.vercel.app/",
   },
