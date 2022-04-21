@@ -208,3 +208,17 @@
   border-top-color: #a945c7;
   border-left-color: #a945c7;
 }
+
+.experienceColumn {
+    padding: 1rem 1rem 2.46rem 1rem;
+}
+
+.titleAndCertificate {
+    display: flex;
+    justify-content: space-between;
+    height: 2.5rem;
+}
+
+.certificate {
+    padding-right: 3rem ;
+}

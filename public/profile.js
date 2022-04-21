@@ -111,23 +111,40 @@ export const skillsStikers = [
     tec: "Sequelize",
     url: "https://raw.githubusercontent.com/AlanMauricioCastillo/Portfolio/master/public/skilsStikers/sequelize.png",
   },
+  {
+    tec: "Vercel",
+    url: "https://raw.githubusercontent.com/AlanMauricioCastillo/Portfolio/master/public/skilsStikers/vercel.svg",
+  },
 ];
 
 export const skillLogo =
   "https://raw.githubusercontent.com/AlanMauricioCastillo/Portfolio/master/public/skilsStikers/giphyskils.webp";
 
 export const experience = [
+    {
+        name: "UI Developer",
+        since: "February 2021",
+        to: "present",
+        description: `I am working as a UI Developer at a large company. I am part of a team responsible 
+        for the development and support of e-commerce for the company's clients, in the entire LATAM region.`,
+        link: "https://www.valtech.com/",
+        webSiteName: "Valtech",
+        certificateUrl: "",
+        certificateImg: "",
+      },
   {
     name: "Full Stack Developer",
     since: "June 2021",
-    to: "Present",
+    to: "December 2021",
     description: `I carried out software development projects related to the Internet, as part of a team, 
-  specialized in programming of web applications, using the most widely accepted technologies in the market, 
-  but I also developed skills in graphic design and usability. I have knowledge related to Windows and Linux operating systems, 
-  JavaScript, SQL Server, MySQL, HTML5, CSS, responsive design, CSS animation, Flex layout, Networks, Ecommerce, 
-  Information Security, testing.`,
+    specialized in programming of web applications, using the most widely accepted technologies in the market, 
+    but I also developed skills in graphic design and usability. I have knowledge related to Windows and Linux operating systems, 
+    JavaScript, SQL Server, MySQL, HTML5, CSS, responsive design, CSS animation, Flex layout, Networks, Ecommerce, 
+    Information Security, testing.`,
     link: "https://www.soyhenry.com/",
-    webSiteName: "www.soyhenry.com",
+    webSiteName: "Soy Henry",
+    certificateUrl: "https://certificates.soyhenry.com/cert?id=ac032078-3150-4731-aed7-f480b4f4129b",
+    certificateImg: "https://raw.githubusercontent.com/AlanMauricioCastillo/Portfolio/master/public/certificado_centrado.png",
   },
   {
     name: "Professional Driver",
@@ -135,9 +152,11 @@ export const experience = [
     to: "February 2021",
     description: `I drove large passengers vehicles in urban environments.`,
     link: "https://empresa-maipu.com.ar/",
-    webSiteName: "www.empresa-maipu.com.ar",
+    webSiteName: "Empresa Maipu",
+    certificateUrl: "",
+    certificateImg: "",
   },
-  {
+  /* {
     name: "Manager of concrete batching plant",
     since: "May 2018",
     to: "January 2019",
@@ -146,7 +165,7 @@ export const experience = [
   leading a fleet of 5 trucks.`,
     link: "http://inducret.com.ar/",
     webSiteName: "inducret.com.ar",
-  },
+  }, */
 ];
 
 export const I_am = {

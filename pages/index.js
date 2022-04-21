@@ -124,15 +124,20 @@ const Index = () => {
 
         <div className="col-md-7">
           <div className="card bg-dark border-light">
-            <div className="card-body">
+            <div className="card-body experienceColumn">
               <h1 className="text-light">Experience</h1>
               <ul>
                 {experience.map((exp, index) => (
                   <li key={index}>
+                  <div className="titleAndCertificate">
                     <h3>
                       <i className="fas fa-briefcase"></i>
                       {exp.name}
                     </h3>
+                  <a href={exp.certificateUrl} className="certificate">
+                      <img width="60px" src={exp.certificateImg}></img>
+                  </a>
+                    </div>
                     <p>
                       <i className="fas fa-calendar-alt"></i>
                       {exp.since} - {exp.to}
