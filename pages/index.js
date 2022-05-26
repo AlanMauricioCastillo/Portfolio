@@ -105,7 +105,7 @@ const Index = () => {
             </ul>
           </div>
           <div className="d-flex flex-row justify-content-around align-items-center card bg-black pb-4">
-            <a href="/Mauricio Castillo resume.pdf" className="intermitenteReflex" download>
+            <a href="/Mauricio_Castillo_CV_May_2022.pdf" className="intermitenteReflex" download>
               <span className="span1"></span>
               <span className="span2"></span>
               <span className="span3"></span>
