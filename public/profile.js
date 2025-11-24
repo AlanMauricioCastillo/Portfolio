@@ -192,13 +192,12 @@ export const projects = [
     img: "./CountriesImg.png",
     link: "https://country-proyect.vercel.app/",
   },
- /*  {
-    name: "Project Name",
-    description: `This is my portfolio, it is a website that i have developed using React.js,
-  it is a personal website that i have developed using React.js`,
-    img: "https://camo.githubusercontent.com/3edee9b46b6580d91bcb406d490dbd2558be1f80d60f7b42893696321254e50a/68747470733a2f2f692e696d6775722e636f6d2f4e764e7a3255762e706e67",
-    link: "https://alanmauriciocastillo.github.io/Portfolio/",
-  },
+  {
+    name: "Lactar Amando",
+    description: `Professional website developed for childcare and breastfeeding counseling services. Responsive design focused on presenting services and contact information. Developed with: JavaScript, CSS3, and UI libraries.`,
+    img: "./lactar_amando_img.png",
+    link: "https://lactaramando.com",
+  }/*  ,
   {
     name: "Project Name",
     description: `This is my portfolio, it is a website that i have developed using React.js,
@@ -237,7 +236,7 @@ export const links = {
   },
   linkedIn: {
     icon: "https://raw.githubusercontent.com/AlanMauricioCastillo/Portfolio/master/public/stikersDeContacto/linked-in-alt.svg",
-    urlink: "https://www.linkedin.com/in/alancastillofullstackdeveloper/",
+    urlink: "https://www.linkedin.com/in/mauriciocastillodev/",
   },
   handshake: {
     icon: "https://raw.githubusercontent.com/AlanMauricioCastillo/Portfolio/master/public/stikersDeContacto/handshake.gif",
