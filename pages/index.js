@@ -32,7 +32,7 @@ const Index = () => {
           <div className="card card-body bg-dark border-light">
             <div className="row">
               <div className="col-md-5">
-                <img src="DEV.gif" alt="Alan Castillo" className="img-fluid" />
+                <img src="img_dev.gif" alt="Alan Castillo" className="img-fluid" />
               </div>
               <div className="col-md-7">
                 <h1 className="text-light">{I_am.name}</h1>
