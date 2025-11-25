@@ -122,11 +122,10 @@ export const skillLogo =
 
 export const experience = [
     {
-        name: "UI Developer",
+        name: "Full Stack Engineer",
         since: "February 2021",
         to: "present",
-        description: `I am working as a UI Developer at a large company. I am part of a team responsible 
-        for the development and support of e-commerce for the company's clients, in the entire LATAM region.`,
+        description: `Designing high-performance e-commerce ecosystems for global clients across LATAM. I specialize in building scalable Frontend architectures using VTEX IO & React, and developing critical Backend microservices with Node.js to optimize data flow and API integration. Focused on performance (Web Vitals), SEO, and delivering complex business logic.`,
         link: "https://www.valtech.com/",
         webSiteName: "Valtech",
         certificateUrl: "",
@@ -155,70 +154,40 @@ export const experience = [
     webSiteName: "Empresa Maipu",
     certificateUrl: "",
     certificateImg: "",
-  },
-  /* {
-    name: "Manager of concrete batching plant",
-    since: "May 2018",
-    to: "January 2019",
-    description: `I managed the production of a concrete batching plant, 
-  coordinating suppliers, carrying out logistics and dealing with clients, 
-  leading a fleet of 5 trucks.`,
-    link: "http://inducret.com.ar/",
-    webSiteName: "inducret.com.ar",
-  }, */
+  }
 ];
 
 export const I_am = {
   name: "Mauricio A. Castillo",
-  profession: "Full Stack Developer",
-  description: `Greetings I'm a passionate Software Developer, consider that I
-  have good Analytical Skills and I would love to study Software
-  Engineering and Computer Science. I consider myself a person
-  with good soft skills, always with the possibility of
-  improving.`,
+  profession: "Full Stack Engineer",
+  description: `Building Scalable Web Solutions & Microservices. Specialized in React & Node.js ecosystem.`,
 };
 
 export const projects = [
   {
-    name: "JamStack Ecommerce",
-    description: `Project created in the Henry bootcamp, carried out a group project with 7 more members, we use current technologies and only CSS.`,
+    name: "Enterprise E-commerce Solution Valtech ✲",
+    description: `Currently architecting critical microservices for global retail clients. Migrated legacy endpoints to Node.js/Express, reducing server costs and improving API response times by 30%. Collaborating in an Agile environment to deliver scalable features for high-traffic events like Black Friday.`,
+    img: "./logo_val.png",
+    link: "https://www.valtech.com/offerings/commerce-acceleration/",
+  },
+  {
+    name: "Scalable E-commerce Architecture",
+    description: `Engineered a full-featured e-commerce platform using a Microservices approach. Designed the RESTful API endpoints for product management and implemented secure user authentication (JWT). Optimized database queries to handle concurrent user sessions efficiently.`,
     img: "./PgImg.png",
     link: "https://ecommerce-pg.vercel.app",
   },
   {
-    name: "Countries PI",
-    description: `SPA Individual Project:  Countries
-    Developed with: JavaScript, Node.Js, React-Redux, Express, SQL, TDD, CSS, HTML.`,
+    name: "GeoData Analytics Dashboard",
+    description: `Developed a high-performance Single Page Application (SPA) to visualize complex geographical data. Built a custom Node.js backend to filter, sort, and search through large datasets with sub-second latency. Implemented rigorous TDD methodologies to ensure API reliability.`,
     img: "./CountriesImg.png",
     link: "https://country-proyect.vercel.app/",
   },
   {
-    name: "Lactar Amando",
-    description: `Professional website developed for childcare and breastfeeding counseling services. Responsive design focused on presenting services and contact information. Developed with: JavaScript, CSS3, and UI libraries.`,
+    name: "Lactar Amando - Service Platform",
+    description: `Delivered a custom digital solution for a healthcare client, focusing on SEO optimization and mobile-first responsiveness. Integrated UI libraries to enhance user engagement and implemented a contact system that increased client lead generation.`,
     img: "./lactar_amando_img.png",
     link: "https://lactaramando.com",
-  }/*  ,
-  {
-    name: "Project Name",
-    description: `This is my portfolio, it is a website that i have developed using React.js,
-  it is a personal website that i have developed using React.js`,
-    img: "https://camo.githubusercontent.com/3edee9b46b6580d91bcb406d490dbd2558be1f80d60f7b42893696321254e50a/68747470733a2f2f692e696d6775722e636f6d2f4e764e7a3255762e706e67",
-    link: "https://alanmauriciocastillo.github.io/Portfolio/",
-  },
-  {
-    name: "Project Name",
-    description: `This is my portfolio, it is a website that i have developed using React.js,
-  it is a personal website that i have developed using React.js`,
-    img: "https://camo.githubusercontent.com/3edee9b46b6580d91bcb406d490dbd2558be1f80d60f7b42893696321254e50a/68747470733a2f2f692e696d6775722e636f6d2f4e764e7a3255762e706e67",
-    link: "https://alanmauriciocastillo.github.io/Portfolio/",
-  },
-  {
-    name: "Project Name",
-    description: `This is my portfolio, it is a website that i have developed using React.js,
-  it is a personal website that i have developed using React.js`,
-    img: "https://camo.githubusercontent.com/3edee9b46b6580d91bcb406d490dbd2558be1f80d60f7b42893696321254e50a/68747470733a2f2f692e696d6775722e636f6d2f4e764e7a3255762e706e67",
-    link: "https://alanmauriciocastillo.github.io/Portfolio/",
-  }, */
+  }
 ];
 
 export const PinedRepos = [
