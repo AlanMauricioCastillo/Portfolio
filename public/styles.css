@@ -228,3 +228,12 @@
         padding-right: 0rem ;
     }
 }
+
+.card-body::first-child .btn.btn-primary {
+    font-size: 0px;
+}
+
+.card-body::first-child .btn.btn-primary::after {
+    content: "Know More";
+    font-size: 16px;
+}

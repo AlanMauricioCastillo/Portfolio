@@ -168,7 +168,7 @@ export const projects = [
     name: "Enterprise E-commerce Solution Valtech ✲",
     description: `Currently architecting critical microservices for global retail clients. Migrated legacy endpoints to Node.js/Express, reducing server costs and improving API response times by 30%. Collaborating in an Agile environment to deliver scalable features for high-traffic events like Black Friday.`,
     img: "./logo_val.png",
-    link: "https://www.valtech.com/es-ar/servicios/aceleracion-de-commerce/",
+    link: "https://www.valtech.com/offerings/commerce-acceleration/",
   },
   {
     name: "Scalable E-commerce Architecture",
