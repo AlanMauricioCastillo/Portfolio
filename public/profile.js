@@ -128,8 +128,8 @@ export const experience = [
         description: `Designing high-performance e-commerce ecosystems for global clients across LATAM. I specialize in building scalable Frontend architectures using VTEX IO & React, and developing critical Backend microservices with Node.js to optimize data flow and API integration. Focused on performance (Web Vitals), SEO, and delivering complex business logic.`,
         link: "https://www.valtech.com/",
         webSiteName: "Valtech",
-        certificateUrl: "",
-        certificateImg: "",
+        certificateUrl: "https://achievements.eicom.org/b33a1f06-ade1-4ea4-9dd0-5936e5090018",
+        certificateImg: "https://raw.githubusercontent.com/AlanMauricioCastillo/Portfolio/master/public/vtex_io_certi.png",
       },
   {
     name: "Full Stack Developer",
