@@ -133,8 +133,8 @@ export const experience = [
       },
   {
     name: "Full Stack Developer",
-    since: "June 2021",
-    to: "December 2021",
+    since: "June 2020",
+    to: "February 2021",
     description: `I carried out software development projects related to the Internet, as part of a team, 
     specialized in programming of web applications, using the most widely accepted technologies in the market, 
     but I also developed skills in graphic design and usability. I have knowledge related to Windows and Linux operating systems, 
@@ -147,8 +147,8 @@ export const experience = [
   },
   {
     name: "Professional Driver",
-    since: " April 2019",
-    to: "February 2021",
+    since: " April 2012",
+    to: "June 2020",
     description: `I drove large passengers vehicles in urban environments.`,
     link: "https://empresa-maipu.com.ar/",
     webSiteName: "Empresa Maipu",
