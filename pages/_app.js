@@ -1,4 +1,5 @@
 import "bootswatch/dist/vapor/bootstrap.min.css";
+import "../styles/tailwind.css";
 import "../public/styles.css";
 import Head from 'next/head'
 
