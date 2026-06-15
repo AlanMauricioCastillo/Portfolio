@@ -38,20 +38,19 @@ const Index = () => {
                 <h1 className="text-light">{I_am.name}</h1>
                 <h3>{I_am.profession}</h3>
                 <p>{I_am.description}</p>
-                <a className="intermitente"
-                onClick={() => setShowModal(true)}
-                >
-                  <span className="span1"></span>
-                  <span className="span2"></span>
-                  <span className="span3"></span>
-                  <span className="span4"></span>
-                  <img width="85px" align="center" src={links.handshake.icon} />
-                </a>
-                <Botn
-                  urlink={links.linkedIn.urlink}
-                  icon={links.linkedIn.icon}
-                />
-                <Botn urlink={links.twetter.urlink} icon={links.twetter.icon} />
+                <div className="row-intermitente-container">
+                  <a className="intermitente intermitente-handshake"
+                  onClick={() => setShowModal(true)}
+                  >
+                    <span className="span1"></span>
+                    <span className="span2"></span>
+                    <span className="span3"></span>
+                    <span className="span4"></span>
+                    <img width="85px" align="center" src={links.handshake.icon} />
+                  </a>
+                  <Botn urlink={links.linkedIn.urlink} icon={links.linkedIn.icon} className={links.linkedIn.className} />
+                  <Botn urlink={links.twetter.urlink} icon={links.twetter.icon} className={links.twetter.className} />
+                </div>
               </div>
             </div>
           </div>

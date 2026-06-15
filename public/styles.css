@@ -227,6 +227,10 @@
     .certificate {
         padding-right: 0rem ;
     }
+
+    .row-intermitente-container {
+      justify-content: center;
+    }
 }
 
 .card.card-body .row > .col-md-4.p-2:nth-child(2) .card-body .btn.btn-primary {
@@ -236,4 +240,24 @@
 .card.card-body .row > .col-md-4.p-2:nth-child(2) .card-body .btn.btn-primary::after {
     content: "Know More";
     font-size: 16px;
+}
+
+.row-intermitente-container {
+  display: flex;
+}
+
+.row-intermitente-container > .intermitente {
+  margin: 0;
+}
+
+.row-intermitente-container > .intermitente.intermitente-handshake {
+  order: 2;
+}
+
+.row-intermitente-container > .intermitente.intermitente-linkedIn {
+  order: 1;
+}
+
+.row-intermitente-container > .intermitente.intermitente-twetter {
+  order: 3;
 }
