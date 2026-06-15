@@ -124,8 +124,8 @@ export const experience = [
     {
         name: "Full Stack Engineer",
         since: "February 2021",
-        to: "present",
-        description: `Designing high-performance e-commerce ecosystems for global clients across LATAM. I specialize in building scalable Frontend architectures using VTEX IO & React, and developing critical Backend microservices with Node.js to optimize data flow and API integration. Focused on performance (Web Vitals), SEO, and delivering complex business logic.`,
+        to: "June 2026",
+        description: `Designed high-performance e-commerce ecosystems for clients across LATAM. I specialized in building scalable Frontend architectures using VTEX IO & React, and developing critical Backend microservices with Node.js to optimize data flow and API integration. Focused on performance (Web Vitals), SEO, and delivering complex business logic.`,
         link: "https://www.valtech.com/",
         webSiteName: "Valtech",
         certificateUrl: "https://achievements.eicom.org/b33a1f06-ade1-4ea4-9dd0-5936e5090018",
@@ -145,7 +145,7 @@ export const experience = [
     certificateUrl: "https://certificates.soyhenry.com/cert?id=ac032078-3150-4731-aed7-f480b4f4129b",
     certificateImg: "https://raw.githubusercontent.com/AlanMauricioCastillo/Portfolio/master/public/certificado_centrado.png",
   },
-  {
+  /* {
     name: "Professional Driver",
     since: " April 2012",
     to: "June 2020",
@@ -154,7 +154,7 @@ export const experience = [
     webSiteName: "Empresa Maipu",
     certificateUrl: "",
     certificateImg: "",
-  }
+  } */
 ];
 
 export const I_am = {
@@ -171,13 +171,13 @@ export const projects = [
     link: "https://www.valtech.com/offerings/commerce-acceleration/",
   },
   {
-    name: "Scalable E-commerce Architecture",
+    name: "Scalable E-commerce Architecture [deprecated]",
     description: `Engineered a full-featured e-commerce platform using a Microservices approach. Designed the RESTful API endpoints for product management and implemented secure user authentication (JWT). Optimized database queries to handle concurrent user sessions efficiently.`,
     img: "./PgImg.png",
     link: "https://ecommerce-pg.vercel.app",
   },
   {
-    name: "GeoData Analytics Dashboard",
+    name: "GeoData Analytics Dashboard [deprecated]",
     description: `Developed a high-performance Single Page Application (SPA) to visualize complex geographical data. Built a custom Node.js backend to filter, sort, and search through large datasets with sub-second latency. Implemented rigorous TDD methodologies to ensure API reliability.`,
     img: "./CountriesImg.png",
     link: "https://country-proyect.vercel.app/",
@@ -200,14 +200,17 @@ export const PinedRepos = [
 
 export const links = {
   twetter: {
+    className: "intermitente-twetter",
     icon: "https://raw.githubusercontent.com/AlanMauricioCastillo/Portfolio/master/public/stikersDeContacto/twitter.svg",
     urlink: "https://www.twitter.com/@AlanCas94011193",
   },
   linkedIn: {
+    className: "intermitente-linkedIn",
     icon: "https://raw.githubusercontent.com/AlanMauricioCastillo/Portfolio/master/public/stikersDeContacto/linked-in-alt.svg",
     urlink: "https://www.linkedin.com/in/mauriciocastillodev/",
   },
   handshake: {
+    className: "intermitente-handshake",
     icon: "https://raw.githubusercontent.com/AlanMauricioCastillo/Portfolio/master/public/stikersDeContacto/handshake.gif",
   },
 };

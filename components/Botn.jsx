@@ -1,10 +1,10 @@
 
 
-const Botn = ({urlink, icon}) => {
+const Botn = ({urlink, icon, className}) => {
   let size = "38";
   if (icon.slice(-13) === "handshake.gif") size = "85"
   return (
-    <a href={urlink} className="intermitente">
+    <a href={urlink} className={`intermitente ${className}`}> 
       <span className="span1"></span>
       <span className="span2"></span>
       <span className="span3"></span>
