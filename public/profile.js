@@ -129,7 +129,7 @@ export const aiSkills = [
       "Prompt design, context management and working with large language models for reliable, production-minded results.",
   },
   {
-    name: "MCP · Model Context Protocol",
+    name: "Model Context Protocol (MCP)",
     description:
       "Connecting models to tools, data and services through MCP servers and reusable integrations.",
   },
@@ -146,7 +146,7 @@ export const aiSkills = [
   {
     name: "Artifacts",
     description:
-      "Producing durable, reviewable outputs — plans, docs, tickets and UI — that people and agents can iterate on.",
+      "Producing durable, reviewable outputs (plans, docs, tickets and UI) that people and agents can iterate on.",
   },
 ];
 
@@ -166,7 +166,7 @@ export const experience = [
     name: "Backend & AI Engineer",
     since: "October 2026",
     to: "Present",
-    description: `Software engineer at EPAM, currently staffed on Personal Pay — a fintech (digital wallet). Strong backend focus: building and maintaining robust services, APIs and data flows, with hands-on CI/CD to ship reliably. Also applying AI agent orchestration (LLMs, MCP, skills, contexts and artifacts) to automate and accelerate delivery.`,
+    description: `Software engineer at EPAM, currently staffed on Personal Pay, a fintech (digital wallet). Strong backend focus: building and maintaining robust services, APIs and data flows, with hands-on CI/CD to ship reliably. Also applying AI agent orchestration (LLMs, MCP, skills, contexts and artifacts) to automate and accelerate delivery.`,
     link: "https://www.epam.com/",
     webSiteName: "EPAM",
   },
@@ -209,7 +209,7 @@ export const experience = [
 export const I_am = {
   name: "Mauricio A. Castillo",
   profession: "Full Stack Engineer",
-  description: `Backend-strong full stack engineer building scalable web solutions & microservices, with solid CI/CD and hands-on AI agent orchestration — LLMs, MCP, skills, contexts and artifacts.`,
+  description: `Backend-strong full stack engineer building scalable web solutions & microservices, with solid CI/CD and hands-on AI agent orchestration: LLMs, MCP, skills, contexts and artifacts.`,
 };
 
 export const projects = [

@@ -57,8 +57,8 @@ const GitHub = ({ user, repo, error }) => {
 
           <div>
             <div className="section-head">
-              <span className="eyebrow">Open source</span>
               <h2>Pinned repositories</h2>
+              <p className="section-sub">What I build and maintain in the open.</p>
             </div>
             <div className="repo-grid">
               {pinned.map((r, i) => (

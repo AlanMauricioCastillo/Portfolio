@@ -49,8 +49,7 @@ body::before {
   inset: 0;
   pointer-events: none;
   background:
-    radial-gradient(720px 360px at 18% -4%, var(--accent-soft), transparent 62%),
-    radial-gradient(900px 480px at 100% 0%, rgba(120, 90, 200, 0.07), transparent 60%);
+    radial-gradient(720px 360px at 18% -4%, var(--accent-soft), transparent 62%);
   z-index: 0;
 }
 
@@ -61,13 +60,14 @@ h1, h2, h3, h4 {
   line-height: 1.12;
   color: var(--text);
   margin: 0 0 0.5em;
+  text-wrap: balance;
 }
 
 h1 { font-size: clamp(2.2rem, 5.5vw, 3.5rem); }
 h2 { font-size: clamp(1.5rem, 3vw, 2rem); }
 h3 { font-size: 1.25rem; }
 
-p { margin: 0 0 1em; }
+p { margin: 0 0 1em; text-wrap: pretty; }
 
 a {
   color: var(--accent-2);
@@ -91,23 +91,24 @@ img { max-width: 100%; display: block; }
   width: 100%;
   max-width: var(--container);
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 0 clamp(22px, 4vw, 40px);
 }
 
-.section { padding: 72px 0; position: relative; z-index: 1; }
-.section--alt { background: var(--bg-2); }
+.section { padding: clamp(56px, 8vw, 96px) 0; position: relative; z-index: 1; }
+.section--alt {
+  background: var(--bg-2);
+  /* Extiende el fondo alterno a todo el ancho del viewport sin tocar el layout */
+  box-shadow: 0 0 0 100vmax var(--bg-2);
+  clip-path: inset(0 -100vmax);
+}
 
-.section-head { max-width: 640px; margin-bottom: 34px; }
+.section-head { max-width: 640px; margin-bottom: clamp(28px, 4vw, 40px); }
 
-.eyebrow {
-  display: inline-block;
-  font-family: var(--font-sans);
-  font-size: 0.78rem;
-  font-weight: 700;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: var(--accent-2);
-  margin-bottom: 12px;
+.section-sub {
+  margin: 0;
+  max-width: 60ch;
+  color: var(--text-2);
+  font-size: 1rem;
 }
 
 /* ---------- Buttons ---------- */
@@ -211,11 +212,11 @@ img { max-width: 100%; display: block; }
 .nav-toggle svg { width: 22px; height: 22px; }
 
 /* ---------- Hero ---------- */
-.hero { padding: 80px 0 64px; }
+.hero { padding: clamp(56px, 7vw, 88px) 0 clamp(48px, 6vw, 72px); }
 .hero-grid {
   display: grid;
   grid-template-columns: 1.25fr 1fr;
-  gap: 48px;
+  gap: clamp(32px, 5vw, 56px);
   align-items: center;
 }
 .hero-name {
@@ -225,7 +226,6 @@ img { max-width: 100%; display: block; }
   line-height: 1.02;
   margin: 0 0 8px;
 }
-.hero-name .accent { color: var(--accent-2); }
 .hero-role {
   font-family: var(--font-sans);
   font-size: 1.15rem;
@@ -250,13 +250,13 @@ img { max-width: 100%; display: block; }
 .strengths {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
-  margin-bottom: 24px;
+  gap: 9px;
+  margin-bottom: 28px;
 }
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  gap: 12px;
+  gap: 14px;
 }
 .skill {
   display: flex;
@@ -268,30 +268,30 @@ img { max-width: 100%; display: block; }
   border-radius: var(--radius-sm);
   transition: border-color 0.18s ease, transform 0.16s ease, background 0.18s ease;
 }
-.skill:hover { border-color: var(--border-strong); transform: translateY(-2px); }
+.skill:hover { border-color: var(--border-strong); }
 .skill img { width: 30px; height: 30px; object-fit: contain; flex: none; }
-.skill span { font-size: 0.95rem; font-weight: 600; color: var(--text-2); }
+.skill span { font-size: 0.95rem; font-weight: 600; color: var(--text-2); min-width: 0; overflow-wrap: break-word; }
 .skill:hover span { color: var(--text); }
 
 /* ---------- AI & agent orchestration ---------- */
 .ai-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
+  gap: 22px;
 }
 .ai-card {
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  padding: 22px;
+  padding: 24px;
   transition: border-color 0.18s ease, transform 0.16s ease;
 }
-.ai-card:hover { border-color: var(--border-strong); transform: translateY(-2px); }
+.ai-card:hover { border-color: var(--border-strong); }
 .ai-card h3 { margin: 0 0 8px; font-size: 1.08rem; }
 .ai-card p { margin: 0; color: var(--text-2); font-size: 0.95rem; }
 
 /* ---------- Timeline (experience) ---------- */
-.timeline { list-style: none; margin: 0; padding: 0; display: grid; gap: 28px; }
+.timeline { list-style: none; margin: 0; padding: 0; display: grid; gap: 32px; max-width: 640px; }
 .timeline-item {
   position: relative;
   padding-left: 28px;
@@ -327,6 +327,7 @@ img { max-width: 100%; display: block; }
 .timeline-item p { color: var(--text-2); margin: 8px 0 0; }
 .timeline-item a { font-weight: 600; }
 .timeline-org { font-weight: 600; color: var(--text-2); }
+.timeline-cert { display: block; margin-top: 6px; font-size: 0.9rem; }
 
 .cert-link {
   display: inline-flex;
@@ -342,7 +343,7 @@ img { max-width: 100%; display: block; }
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 22px;
+  gap: 26px;
 }
 .project {
   display: flex;
@@ -353,7 +354,7 @@ img { max-width: 100%; display: block; }
   overflow: hidden;
   transition: border-color 0.2s ease, transform 0.18s ease;
 }
-.project:hover { border-color: var(--border-strong); transform: translateY(-3px); }
+.project:hover { border-color: var(--border-strong); }
 .project-media {
   aspect-ratio: 16 / 9;
   overflow: hidden;
@@ -361,20 +362,19 @@ img { max-width: 100%; display: block; }
 }
 .project-media img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
 .project:hover .project-media img { transform: scale(1.05); }
-.project-body { padding: 20px 22px 22px; display: flex; flex-direction: column; gap: 10px; flex: 1; }
+.project-body { padding: 22px 24px 24px; display: flex; flex-direction: column; gap: 10px; flex: 1; }
 .project-body h3 { margin: 0; }
 .project-body p { color: var(--text-2); margin: 0; flex: 1; }
 .project-tags { display: flex; flex-wrap: wrap; gap: 6px; }
 .chip {
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
   color: var(--text-2);
   background: var(--surface-2);
   border: 1px solid var(--border);
   border-radius: 999px;
-  padding: 3px 10px;
+  padding: 4px 11px;
 }
 .chip--warn { color: var(--accent-2); border-color: var(--accent-soft); background: var(--accent-soft); }
 .chip--accent { color: var(--accent-2); border-color: var(--accent-soft); background: var(--accent-soft); }

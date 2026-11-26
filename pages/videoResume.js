@@ -9,9 +9,8 @@ const VideoPlayer = () => {
     <Layout title="Video Resume" description="A short video introduction of Mauricio A. Castillo.">
       <section className="section">
         <div className="section-head">
-          <span className="eyebrow">In short</span>
           <h2>Video resume</h2>
-          <p>A quick introduction to who I am and how I work.</p>
+          <p className="section-sub">A quick introduction to who I am and how I work.</p>
         </div>
         <div style={{ position: "relative", paddingTop: "56.25%", borderRadius: "var(--radius)", overflow: "hidden", border: "1px solid var(--border-strong)", background: "#000" }}>
           <ReactPlayer

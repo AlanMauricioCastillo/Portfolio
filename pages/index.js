@@ -80,10 +80,9 @@ const Index = () => {
       <section className="hero">
         <div className="hero-grid">
           <div className="hero-copy">
-            <span className="eyebrow">Full Stack Engineer</span>
             <h1 className="hero-name">
               Mauricio A.<br />
-              <span className="accent">Castillo</span>
+              Castillo
             </h1>
             <p className="hero-role">{I_am.profession}</p>
             <p className="hero-desc">{I_am.description}</p>
@@ -114,8 +113,8 @@ const Index = () => {
       {/* Skills */}
       <section className="section section--alt">
         <div className="section-head">
-          <span className="eyebrow">Toolbox</span>
           <h2>Skills &amp; technologies</h2>
+          <p className="section-sub">Backend-leaning full stack: Node.js, TypeScript, React and the data layer.</p>
         </div>
         <div className="strengths">
           {coreStrengths.map((s) => (
@@ -137,8 +136,8 @@ const Index = () => {
       {/* AI & agent orchestration */}
       <section className="section">
         <div className="section-head">
-          <span className="eyebrow">AI Engineering</span>
           <h2>AI &amp; agent orchestration</h2>
+          <p className="section-sub">Coordinating models, tools and agents to complete real work.</p>
         </div>
         <div className="ai-grid">
           {aiSkills.map(({ name, description }) => (
@@ -153,8 +152,8 @@ const Index = () => {
       {/* Experience */}
       <section className="section section--alt">
         <div className="section-head">
-          <span className="eyebrow">Career</span>
           <h2>Experience</h2>
+          <p className="section-sub">Roles and the problems I worked on.</p>
         </div>
         <ul className="timeline">
           {experience.map((exp, index) => (
@@ -162,7 +161,7 @@ const Index = () => {
               <div className="timeline-head">
                 <h3>{exp.name}</h3>
                 <span className="timeline-meta">
-                  <CalendarIcon /> {exp.since} — {exp.to}
+                  <CalendarIcon /> {exp.since}–{exp.to}
                 </span>
               </div>
               <p>{exp.description}</p>
@@ -174,12 +173,9 @@ const Index = () => {
                 <span className="timeline-org">{exp.webSiteName}</span>
               )}
               {exp.certificateUrl && (
-                <span>
-                  {" · "}
-                  <a href={exp.certificateUrl} target="_blank" rel="noopener noreferrer">
-                    View certification
-                  </a>
-                </span>
+                <a className="timeline-cert" href={exp.certificateUrl} target="_blank" rel="noopener noreferrer">
+                  View certification
+                </a>
               )}
             </li>
           ))}
@@ -189,8 +185,8 @@ const Index = () => {
       {/* Portfolio */}
       <section className="section">
         <div className="section-head">
-          <span className="eyebrow">Work</span>
           <h2>Selected projects</h2>
+          <p className="section-sub">Selected work I shipped.</p>
         </div>
         <div className="projects-grid">
           {projects.map(({ name, description, img, link }, index) => {
