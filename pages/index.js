@@ -1,186 +1,255 @@
 import Layout from "../components/Layout";
-import { skillLogo, skillsStikers, projects } from "../public/profile";
-import { experience, I_am, links } from "../public/profile";
-import {Button, ModalHeader, ModalBody, ModalFooter, FormGroup, Input, Label} from 'reactstrap';
-import Botn from "../components/Botn";
+import { skillsStikers, aiSkills, coreStrengths, projects, experience, I_am, links } from "../public/profile";
 import Modal from "../components/Modal";
-import { useRef, useState } from "react";
-import emailjs from 'emailjs-com';
+import { useRef, useState, useCallback } from "react";
+import emailjs from "emailjs-com";
 
+const CalendarIcon = () => (
+  <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <rect x="3" y="4" width="18" height="18" rx="2" />
+    <path d="M16 2v4M8 2v4M3 10h18" />
+  </svg>
+);
+
+const ExternalIcon = () => (
+  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+    <path d="M15 3h6v6M10 14L21 3" />
+  </svg>
+);
+
+const LinkedInIcon = () => (
+  <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+    <path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.55C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.72C24 .77 23.2 0 22.22 0z" />
+  </svg>
+);
+
+const XIcon = () => (
+  <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+    <path d="M18.9 1.15h3.68l-8.04 9.19L24 22.85h-7.41l-5.8-7.58-6.64 7.58H.47l8.6-9.83L0 1.15h7.6l5.24 6.93 6.06-6.93zm-1.29 19.5h2.04L6.49 3.24H4.3l13.31 17.41z" />
+  </svg>
+);
+
+const MailIcon = () => (
+  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <rect x="2" y="4" width="20" height="16" rx="2" />
+    <path d="m22 7-10 6L2 7" />
+  </svg>
+);
+
+const socials = [
+  { label: "LinkedIn", href: links.linkedIn.urlink, Icon: LinkedInIcon },
+  { label: "X (Twitter)", href: links.twetter.urlink, Icon: XIcon },
+];
 
 const Index = () => {
   const [showModal, setShowModal] = useState(false);
-
+  const [sending, setSending] = useState(false);
+  const [status, setStatus] = useState(null);
   const form = useRef();
-  
+  const closeModal = useCallback(() => setShowModal(false), []);
+
   const sendEmail = (e) => {
     e.preventDefault();
+    setSending(true);
+    setStatus(null);
 
-    emailjs.sendForm(process.env.NEXT_PUBLIC_ENV_LOCAL_SERVICE_ID, process.env.NEXT_PUBLIC_ENV_LOCAL_TEMPLATE_ID, form.current, process.env.NEXT_PUBLIC_ENV_LOCAL_USER_ID)
-      .then((result) => {
-          alert(`Mail status ${result.text}`);
-      }, (error) => {
-        alert(`Mail status ${error.text}`);
-      });
-      e.target.reset();
+    emailjs
+      .sendForm(
+        process.env.NEXT_PUBLIC_ENV_LOCAL_SERVICE_ID,
+        process.env.NEXT_PUBLIC_ENV_LOCAL_TEMPLATE_ID,
+        form.current,
+        process.env.NEXT_PUBLIC_ENV_LOCAL_USER_ID
+      )
+      .then(() => {
+        setStatus({ ok: true, text: "Message sent. I'll get back to you soon." });
+        e.target.reset();
+      })
+      .catch(() => {
+        setStatus({ ok: false, text: "Something went wrong. Try again or email me directly." });
+      })
+      .finally(() => setSending(false));
   };
 
   return (
-    <Layout title={"Welcome"}>
-      <header className="row">
-        <div className="col-md-12">
-          <div className="card card-body bg-dark border-light">
-            <div className="row">
-              <div className="col-md-5">
-                <img src="img_dev.gif" alt="Alan Castillo" className="img-fluid" />
-              </div>
-              <div className="col-md-7">
-                <h1 className="text-light">{I_am.name}</h1>
-                <h3>{I_am.profession}</h3>
-                <p>{I_am.description}</p>
-                <div className="row-intermitente-container">
-                  <a className="intermitente intermitente-handshake"
-                  onClick={() => setShowModal(true)}
-                  >
-                    <span className="span1"></span>
-                    <span className="span2"></span>
-                    <span className="span3"></span>
-                    <span className="span4"></span>
-                    <img width="85px" align="center" src={links.handshake.icon} />
-                  </a>
-                  <Botn urlink={links.linkedIn.urlink} icon={links.linkedIn.icon} className={links.linkedIn.className} />
-                  <Botn urlink={links.twetter.urlink} icon={links.twetter.icon} className={links.twetter.className} />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </header>
-
-      <Modal onClose={() => setShowModal(false)} show={showModal}>
-      <form ref={form} onSubmit={sendEmail}>
-      <ModalHeader>
-          Mail me
-        </ModalHeader>
-        <ModalBody>
-          <FormGroup>
-            <Label style={{paddingTop: "8px"}}>Name</Label>
-            <Input type="text" name="user_name" /> 
-          
-            <Label style={{paddingTop: "8px"}}>Mail</Label>
-            <Input type="email" name="user_email" placeholder="name@example.com"/> 
-          
-            <Label style={{paddingTop: "8px"}}>Message</Label>
-            <textarea className="form-control" rows="3" name="message"/> 
-          </FormGroup>
-        </ModalBody>
-
-        <ModalFooter>
-            
-            <input type="submit" color="primary" value="Send" className="btn btn-primary"/>
-            
-        </ModalFooter>
-      </form>
-      </Modal>
-
-      <section className="row py-2">
-        <div className="col-md-5">
-          <div className="p-2 bg-dark card border-light">
-            <h3>
-              Skills <img width="45px" src={skillLogo}></img>
-            </h3>
-            <ul className=" row row-cols-2">
-              {skillsStikers.map(({ tec, url }, index) => (
-                <li className="col" key={index}>
-                  <i className="fas fa-check"></i>
-                  {tec}
-                  <img
-                    style={{ paddingLeft: "13px", paddingTop: "3px" }}
-                    width="50px"
-                    src={url}
-                  ></img>
-                </li>
+    <Layout
+      title="Full Stack Engineer"
+      description="Mauricio A. Castillo — Full Stack Engineer specialized in React & Node.js. Portfolio, projects and experience."
+    >
+      {/* Hero */}
+      <section className="hero">
+        <div className="hero-grid">
+          <div className="hero-copy">
+            <h1 className="hero-name">
+              Mauricio A.<br />
+              Castillo
+            </h1>
+            <p className="hero-role">{I_am.profession}</p>
+            <p className="hero-desc">{I_am.description}</p>
+            <div className="hero-actions">
+              <button type="button" className="btn btn-primary" onClick={() => setShowModal(true)}>
+                <MailIcon /> Contact me
+              </button>
+              {socials.map(({ label, href, Icon }) => (
+                <a
+                  key={label}
+                  href={href}
+                  className="btn btn-ghost"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={label}
+                >
+                  <Icon /> {label}
+                </a>
               ))}
-            </ul>
-          </div>
-          <div className="d-flex flex-row justify-content-around align-items-center card bg-black pb-4">
-            <a href="/Mauricio_Castillo_CV.pdf" className="intermitenteReflex" download>
-              <span className="span1"></span>
-              <span className="span2"></span>
-              <span className="span3"></span>
-              <span className="span4"></span>
-              ⮯Resume
-            </a>
-            <a href="videoResume" className="intermitenteReflex">
-              <span className="span1"></span>
-              <span className="span2"></span>
-              <span className="span3"></span>
-              <span className="span4"></span>
-              🎬 Watch me
-            </a>
-          </div>
-        </div>
-
-        <div className="col-md-7">
-          <div className="card bg-dark border-light">
-            <div className="card-body experienceColumn">
-              <h1 className="text-light">Experience</h1>
-              <ul>
-                {experience.map((exp, index) => (
-                  <li key={index}>
-                  <div className="titleAndCertificate">
-                    <h3>
-                      <i className="fas fa-briefcase"></i>
-                      {exp.name}
-                    </h3>
-                  <a href={exp.certificateUrl} className="certificate">
-                      <img width="60px" src={exp.certificateImg}></img>
-                  </a>
-                    </div>
-                    <p>
-                      <i className="fas fa-calendar-alt"></i>
-                      {exp.since} - {exp.to}
-                    </p>
-                    <p>{exp.description}</p>
-                    <p>
-                      <i className="fas fa-globe"></i>
-                      <a href={exp.link}>{exp.webSiteName}</a>
-                    </p>
-                  </li>
-                ))}
-              </ul>
             </div>
+          </div>
+          <div className="hero-media">
+            <img src="/main_job_photo.jpg" alt="Mauricio A. Castillo" loading="eager" />
           </div>
         </div>
       </section>
 
-      <section className="row pt-2">
-        <div className="col-md-12">
-          <div className="card card-body bg-dark border-light">
-            <div className="row">
-              <div className="col-md-12">
-                <h1 className="text-center text-light">Portfolio</h1>
+      {/* Skills */}
+      <section className="section section--alt">
+        <div className="section-head">
+          <h2>Skills &amp; technologies</h2>
+          <p className="section-sub">Backend-leaning full stack: Node.js, TypeScript, React and the data layer.</p>
+        </div>
+        <div className="strengths">
+          {coreStrengths.map((s) => (
+            <span className="chip chip--accent" key={s}>
+              {s}
+            </span>
+          ))}
+        </div>
+        <div className="skills-grid">
+          {skillsStikers.map(({ tec, url }, index) => (
+            <div className="skill" key={index}>
+              <img src={url} alt={tec} loading="lazy" />
+              <span>{tec}</span>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* AI & agent orchestration */}
+      <section className="section">
+        <div className="section-head">
+          <h2>AI &amp; agent orchestration</h2>
+          <p className="section-sub">Coordinating models, tools and agents to complete real work.</p>
+        </div>
+        <div className="ai-grid">
+          {aiSkills.map(({ name, description }) => (
+            <article className="ai-card" key={name}>
+              <h3>{name}</h3>
+              <p>{description}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      {/* Experience */}
+      <section className="section section--alt">
+        <div className="section-head">
+          <h2>Experience</h2>
+          <p className="section-sub">Roles and the problems I worked on.</p>
+        </div>
+        <ul className="timeline">
+          {experience.map((exp, index) => (
+            <li className="timeline-item" key={index}>
+              <div className="timeline-head">
+                <h3>{exp.name}</h3>
+                <span className="timeline-meta">
+                  <CalendarIcon /> {exp.since}–{exp.to}
+                </span>
               </div>
-              {projects.map(({ name, description, img, link }, index) => (
-                <div className="col-md-4 p-2" key={index}>
-                  <div className="card h-100 border-light">
-                    <div className="overFlow">
-                      <img src={img} className="card-img-top" alt="..."></img>
-                    </div>
-                    <div className="card-body">
-                      <h3>{name}</h3>
-                      <p className="card-text">{description}</p>
-                      <a href={link} className="btn btn-primary">
-                        Go to project
-                      </a>
-                    </div>
+              <p>{exp.description}</p>
+              {exp.link ? (
+                <a href={exp.link} target="_blank" rel="noopener noreferrer">
+                  {exp.webSiteName} <ExternalIcon />
+                </a>
+              ) : (
+                <span className="timeline-org">{exp.webSiteName}</span>
+              )}
+              {exp.certificateUrl && (
+                <a className="timeline-cert" href={exp.certificateUrl} target="_blank" rel="noopener noreferrer">
+                  View certification
+                </a>
+              )}
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      {/* Portfolio */}
+      <section className="section">
+        <div className="section-head">
+          <h2>Selected projects</h2>
+          <p className="section-sub">Selected work I shipped.</p>
+        </div>
+        <div className="projects-grid">
+          {projects.map(({ name, description, img, link }, index) => {
+            const deprecated = /deprecated/i.test(name);
+            const cleanName = name.replace(/\[deprecated\]/i, "").trim();
+            return (
+              <article className="project" key={index}>
+                <div className="project-media">
+                  <img src={img} alt={cleanName} loading="lazy" />
+                </div>
+                <div className="project-body">
+                  <h3>{cleanName}</h3>
+                  <div className="project-tags">
+                    {deprecated && <span className="chip chip--warn">Deprecated</span>}
                   </div>
+                  <p>{description}</p>
+                  <a href={link} className="btn btn-ghost btn-sm" target="_blank" rel="noopener noreferrer">
+                    Visit project <ExternalIcon />
+                  </a>
                 </div>
-              ))}
-            </div>
-          </div>
+              </article>
+            );
+          })}
         </div>
       </section>
+
+      {/* CTA */}
+      <section className="section section--alt">
+        <div className="cta-band">
+          <a href="/Mauricio_Castillo_CV.pdf" className="btn btn-primary" download>
+            Download resume
+          </a>
+          <a href="videoResume" className="btn btn-ghost">
+            Watch video resume
+          </a>
+        </div>
+      </section>
+
+      {/* Contact modal */}
+      <Modal show={showModal} onClose={closeModal} title="Get in touch">
+        <form ref={form} onSubmit={sendEmail}>
+          <div className="field">
+            <label htmlFor="contact-name">Name</label>
+            <input id="contact-name" type="text" name="user_name" required autoComplete="name" />
+          </div>
+          <div className="field">
+            <label htmlFor="contact-email">Email</label>
+            <input id="contact-email" type="email" name="user_email" placeholder="name@example.com" required autoComplete="email" />
+          </div>
+          <div className="field">
+            <label htmlFor="contact-message">Message</label>
+            <textarea id="contact-message" name="message" rows="4" required />
+          </div>
+          <button type="submit" className="btn btn-primary" disabled={sending}>
+            {sending ? "Sending…" : "Send message"}
+          </button>
+          {status && (
+            <div className={`form-feedback ${status.ok ? "form-feedback--ok" : "form-feedback--err"}`} role="status">
+              {status.text}
+            </div>
+          )}
+        </form>
+      </Modal>
     </Layout>
   );
 };

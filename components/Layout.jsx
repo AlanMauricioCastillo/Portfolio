@@ -1,42 +1,39 @@
-import { useRouter } from "next/dist/client/router";
+import { useRouter } from "next/router";
 import { useEffect } from "react";
+import Head from "next/head";
 import NavBar from "./NavBar";
 import nProgress from "nprogress";
-import classnames from "classnames";
 
-const Layout = ({ children, title, footer = true, clas }) => {
+const Layout = ({ children, title, description, footer = true }) => {
   const router = useRouter();
 
   useEffect(() => {
-    const handleRouteChange = (url) => {
-      nProgress.start();
-    };
+    const handleRouteChange = () => nProgress.start();
     router.events.on("routeChangeStart", handleRouteChange);
     router.events.on("routeChangeComplete", () => nProgress.done());
+    router.events.on("routeChangeError", () => nProgress.done());
     return () => {
       router.events.off("routeChangeStart", handleRouteChange);
     };
-  }, []);
+  }, [router.events]);
 
   return (
-    <div className={clas}>
+    <>
+      <Head>
+        {title && <title>{title} — Mauricio A. Castillo</title>}
+        {description && <meta name="description" content={description} />}
+      </Head>
       <NavBar />
-      <main className="container py-4">
-      {
-        title && <h1 className="text-center">{title}</h1>
-      }
-      {children}
-      </main>
-
+      <main className="container">{children}</main>
       {footer && (
-        <footer className="text-primary bg-muted text-center p-2">
+        <footer className="footer">
           <div className="container">
-            <h3>Mauricio A. Castillo</h3>
-            <p>&copy; {new Date().getFullYear()} All Rights Reserved</p>
+            <p className="name">Mauricio A. Castillo</p>
+            <p>&copy; {new Date().getFullYear()} All rights reserved.</p>
           </div>
         </footer>
       )}
-    </div>
+    </>
   );
 };
 
