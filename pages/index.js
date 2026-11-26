@@ -1,5 +1,5 @@
 import Layout from "../components/Layout";
-import { skillsStikers, projects, experience, I_am, links } from "../public/profile";
+import { skillsStikers, aiSkills, coreStrengths, projects, experience, I_am, links } from "../public/profile";
 import Modal from "../components/Modal";
 import { useRef, useState, useCallback } from "react";
 import emailjs from "emailjs-com";
@@ -117,6 +117,13 @@ const Index = () => {
           <span className="eyebrow">Toolbox</span>
           <h2>Skills &amp; technologies</h2>
         </div>
+        <div className="strengths">
+          {coreStrengths.map((s) => (
+            <span className="chip chip--accent" key={s}>
+              {s}
+            </span>
+          ))}
+        </div>
         <div className="skills-grid">
           {skillsStikers.map(({ tec, url }, index) => (
             <div className="skill" key={index}>
@@ -127,8 +134,24 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Experience */}
+      {/* AI & agent orchestration */}
       <section className="section">
+        <div className="section-head">
+          <span className="eyebrow">AI Engineering</span>
+          <h2>AI &amp; agent orchestration</h2>
+        </div>
+        <div className="ai-grid">
+          {aiSkills.map(({ name, description }) => (
+            <article className="ai-card" key={name}>
+              <h3>{name}</h3>
+              <p>{description}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      {/* Experience */}
+      <section className="section section--alt">
         <div className="section-head">
           <span className="eyebrow">Career</span>
           <h2>Experience</h2>
@@ -143,9 +166,13 @@ const Index = () => {
                 </span>
               </div>
               <p>{exp.description}</p>
-              <a href={exp.link} target="_blank" rel="noopener noreferrer">
-                {exp.webSiteName} <ExternalIcon />
-              </a>
+              {exp.link ? (
+                <a href={exp.link} target="_blank" rel="noopener noreferrer">
+                  {exp.webSiteName} <ExternalIcon />
+                </a>
+              ) : (
+                <span className="timeline-org">{exp.webSiteName}</span>
+              )}
               {exp.certificateUrl && (
                 <span>
                   {" · "}
@@ -160,7 +187,7 @@ const Index = () => {
       </section>
 
       {/* Portfolio */}
-      <section className="section section--alt">
+      <section className="section">
         <div className="section-head">
           <span className="eyebrow">Work</span>
           <h2>Selected projects</h2>
@@ -191,7 +218,7 @@ const Index = () => {
       </section>
 
       {/* CTA */}
-      <section className="section">
+      <section className="section section--alt">
         <div className="cta-band">
           <a href="/Mauricio_Castillo_CV.pdf" className="btn btn-primary" download>
             Download resume
